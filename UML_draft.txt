@@ -1,0 +1,106 @@
+Crypto
+--------------
+- AES_KEY_SIZE Integer
+- AES_BLOCK_SIZE Integer
+- AES_IV_SIZE Integer
+----------------
++ generateAESKEY(passphrase:String) SecretKey
++ encrypt(input:String, password:String) String
++ decrypt(chiphertext:String, password:String) String
+
+Note
+------------
+- id String
+- title String
+- content String
+- date Date
+--------------
+<<constructor>> Note(title:String, content:String, date:Date)
++ getId() String
++ getTile() String
++ getContent() String
++ getDate() Date
++ setTitle(title:String)
++ setContent(content:String)
++ setDate(date:Date)
+
+Notes
+--------------
+- notes ArrayList<Note>
+- password String
+----------------
++ populate()
++ getNote(note:Note) ArrayList<Note>
++ addNote(note:Note)
++ removeNote(note:Note)
++ getNoteById(id:String) Note
++ searchNotes(searchText:String) ArrayList<Note>
+
+MainActivity
+-----------------
+
+-----------------
+# onClick(savedInstanceState:Bundle)
++ onClick(v:View)
+
+
+NotesActivity
+-----------------
+
+-----------------
+# onCreate(savedInstanceState:Bundle)
++ onClick(v:View)
++ saveNote(activity:NotesActivity)
++ saveNote(activity:NotesActivity)
+
+SearchActivity
+-----------------
+
+-----------------
+# onClick(savedInstanceState:Bundle)
+
+EditNotehActivity
+-----------------
+
+-----------------
+# onCreate(savedInstanceState:Bundle)
+
+
+NewNoteController
+-----------------
+
+-----------------
++ onClick(v:View)
+
+NoteController
+-----------------
+- id String
+-----------------
+<<constructor>> NoteController(id:String)
++ onClick(v:View)
+
+NotesController
+-----------------
+
+-----------------
++ onClick(v:View)
+
+
+SearchController
+-----------------
+- 
+-----------------
++ onClick(v:View)
+
+NotesAdapter
+-------------
+- notes ArrayList<Note>
+----------------
+<<constructor>> NotesAdapter(notes:ArrayList<Note>)
++ onCreateViewHolder(parent:ViewGroup, viewType:int)
++ onBindViewHolder(holder:NotesListViewHolder, posistion:int)
++ getItemCount() int
+
+
+
+
