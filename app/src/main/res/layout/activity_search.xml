@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:gravity="center_horizontal"
+    android:background="@color/black"
+    android:backgroundTint="@color/black"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:hint="Search Terms"
+        android:fontFamily="monospace"
+        android:padding="10dp"
+        android:layout_marginVertical="30dp"
+        android:background="@color/white"
+        android:inputType="text" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/searchNotesContainer"
+        android:layout_width="match_parent"
+        android:layout_height="610dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</LinearLayout>
